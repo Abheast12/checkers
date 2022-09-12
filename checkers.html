@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px;
+  /* align-items: right; */
+  /* margin-right: 10px; */
+  /* background-color: #0e1d4f; */
+  /* padding: 10px; */
+  /* position: relative; */
+  
+  /* right: 5%;
+  top: 55%; */
+  margin: auto auto;
+  /* border: 4px solid darkgoldenrod; */
+  border: 4px solid black;
+  /* justify-items: center; */
+}
+.grid-item {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:auto auto;
+}
+.b{
+    /* margin:0;
+    padding:0; */
+    /* background-color: burlywood */
+    background-color: black;
+    /* justify-items: center; */
+}
+.w {
+    /* margin: 0;
+    padding: 0; */
+    /* background-color: white; */
+    background-color: red;
+    /* border:0; */
+}
+.dot {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+</style>
+</head>
+<body>
+    <div class="grid-item">
+    <div class="grid-container">
+        <!-- ROW 1 -->
+        <div class="w" id="11"></div>
+        <div class="b" id="12"><img src="redpiece.png" width="100" height="100" class="img"></div>
+        <div class="w" id="13"></div>
+        <div class="b" id="12"><img src="redpiece.png" width="100" height="100" class="img"></div>
+        <div class="w" id="15"></div>
+        <div class="b" id="12"><img src="redpiece.png" width="100" height="100" class="img"></div>
+        <div class="w" id="17"></div>
+        <div class="b" id="12"><img src="redpiece.png" width="100" height="100" class="img"></div>
+
+        
+        <!-- ROW 2 -->
+        <div class="b" id="12"><img src="redpiece.png" width="100" height="100" class="img"></div>
+        <div class="w" id="22"></div>
+        <div class="b" id="12"><img src="redpiece.png" width="100" height="100" class="img"></div>
+        <div class="w" id="24"></div>
+        <div class="b" id="12"><img src="redpiece.png" width="100" height="100" class="img"></div>
+        <div class="w" id="26"></div>
+        <div class="b" id="12"><img src="redpiece.png" width="100" height="100" class="img"></div>
+        <div class="w" id="28"></div>
+
+        <!-- ROW 3 -->
+        <div class="w" id="31"></div>
+        <div class="b" id="12"><img src="redpiece.png" width="100" height="100" class="img"></div>
+        <div class="w" id="33"></div>
+        <div class="b" id="12"><img src="redpiece.png" width="100" height="100" class="img"></div>
+        <div class="w" id="35"></div>
+        <div class="b" id="12"><img src="redpiece.png" width="100" height="100" class="img"></div>
+        <div class="w" id="37"></div>
+        <div class="b" id="12"><img src="redpiece.png" width="100" height="100" class="img"></div>
+
+        
+        <!-- ROW 4 -->
+        <div class="b" id="41"></div>
+        <div class="w" id="42"></div>
+        <div class="b" id="43"></div>
+        <div class="w" id="44"></div>
+        <div class="b" id="45"></div>
+        <div class="w" id="46"></div>
+        <div class="b" id="47"></div>
+        <div class="w" id="48"></div>
+
+        <!-- ROW 5 -->
+        <div class="w" id="51"></div>
+        <div class="b" id="52"></div>
+        <div class="w" id="53"></div>
+        <div class="b" id="54"></div>
+        <div class="w" id="55"></div>
+        <div class="b" id="56"></div>
+        <div class="w" id="57"></div>
+        <div class="b" id="58"></div>
+
+        <!-- ROW 6 -->
+        <div class="b" id="61"><img src="blackpiece.png" width="100" height="100" class="img" onclick="gray(this.parentNode.id)"></div>
+        <div class="w" id="62"></div>
+        <div class="b" id="63"><img src="blackpiece.png" width="100" height="100" class="img" onclick="gray(this.parentNode.id)"></div>
+        <div class="w" id="64"></div>
+        <div class="b" id="65"><img src="blackpiece.png" width="100" height="100" class="img" onclick="gray(this.parentNode.id)"></div>
+        <div class="w" id="66"></div>
+        <div class="b" id="67"><img src="blackpiece.png" width="100" height="100" class="img" onclick="gray(this.parentNode.id)"></div>
+        <div class="w" id="68"></div>
+
+        <!-- ROW 7 -->
+        <div class="w" id="71"></div>
+        <div class="b" id="72"><img src="blackpiece.png" width="100" height="100" class="img" onclick="gray(this.parentNode.id)"></div>
+        <div class="w" id="73"></div>
+        <div class="b" id="74"><img src="blackpiece.png" width="100" height="100" class="img" onclick="gray(this.parentNode.id)"></div>
+        <div class="w" id="75"></div>
+        <div class="b" id="76"><img src="blackpiece.png" width="100" height="100" class="img" onclick="gray(this.parentNode.id)"></div>
+        <div class="w" id="77"></div>
+        <div class="b" id="78"><img src="blackpiece.png" width="100" height="100" class="img" onclick="gray(this.parentNode.id)"></div>
+
+        <!-- ROW 8 -->
+        <div class="b" id="81"><img src="blackpiece.png" width="100" height="100" class="img" onclick="gray(this.parentNode.id)" ></div>
+        <div class="w" id="82"></div>
+        <div class="b" id="83"><img src="blackpiece.png" width="100" height="100" class="img" onclick="gray(this.parentNode.id)"></div>
+        <div class="w" id="84"></div>
+        <div class="b" id="85"><img src="blackpiece.png" width="100" height="100" class="img" onclick="gray(this.parentNode.id)"></div>
+        <div class="w" id="86"></div>
+        <div class="b" id="87"><img src="blackpiece.png" width="100" height="100" class="img" onclick="gray(this.parentNode.id)"></div>
+        <div class="w" id="88"></div>
+    </div>
+    </div>
+    <script>
+var second = 0;
+var first = 0;
+function gray(a){
+    console.log(a);
+    if(second!=0){
+        if(second>1){
+            var firstf = first-1;
+        var secondf = second-1;
+        var num = 10*firstf+secondf;
+        var text = num.toString();
+        var element = document.getElementById(text);
+        // console.log(element.firstChild);
+        if(element.getElementsByTagName('img').length == 0){
+            element.removeChild(element.firstChild);
+        }
+    }
+    if(second<8){
+        var firstf = first-1;
+        var secondf = second+1;
+        var num = 10*firstf+secondf;
+        var text = num.toString();
+        var element = document.getElementById(text);
+        console.log(element.firstChild);
+        if(element.getElementsByTagName('img').length == 0){
+            element.removeChild(element.lastChild);
+        }
+    }
+    }
+
+    first = parseInt(a[0]);
+    var firstf = first-1;
+    second = parseInt(a[1]);
+    
+    if(second>1){
+        var secondf = second-1;
+        var num = 10*firstf+secondf;
+        var text = num.toString();
+        var element = document.getElementById(text);
+        
+        if(element.getElementsByTagName('img').length == 0){
+            var div = document.createElement("div");
+            div.classList.add("dot");
+            element.appendChild(div);
+        }
+        
+    }
+    if(second<8){
+        var secondf = second+1;
+        var num = 10*firstf+secondf;
+        var text = num.toString();
+        var element = document.getElementById(text);
+        if(element.getElementsByTagName('img').length == 0){
+            var div = document.createElement("div");
+            div.classList.add("dot");
+            element.appendChild(div);
+        }
+        // var dots = document.getElementsByClassName("dot");
+        // for (var i = 0; i < dots.length; i++) {
+        //     var elem = dots[i];
+        //     if(dots[i].id==text){
+        //     dots[i].onclick = function(){
+                
+        //             var newimage = document.createElement("img");
+        //             newimage.src = 'blackpiece.png';
+        //             newimage.height = '100';
+        //             newimage.width = '100';
+        //             newimage.classList.add('img');
+        //             document.getElementById(elem.id).appendChild(newimage);
+        //             newimage.addEventListener("click", gray(newimage.parentNode.id));
+        //             var sq = document.getElementById(a);
+        //             sq.removeChild(sq.firstElementChild);
+        //             var graysq = document.getElementById(elem.id);
+        //             graysq.classList.remove("dot");
+                
+        //     }
+        // }
+        //     // dots[i].addEventListener('click', moveChecker(text, a), false);
+        // }
+    }
+    // var dots = document.getElementsByClassName("dot");
+    //     for (var i = 0; i < dots.length; i++) {
+    //         var elem = dots[i];
+    //         console.log(dots[i].id);
+            
+    //         dots[i].onclick = function(){
+    //                 // console.log(text);
+    //                 var newimage = document.createElement("img");
+    //                 newimage.src = 'blackpiece.png';
+    //                 newimage.height = '100';
+    //                 newimage.width = '100';
+    //                 newimage.classList.add('img');
+    //                 document.getElementById(elem.id).appendChild(newimage);
+    //                 newimage.addEventListener("click", gray(newimage.parentNode.id));
+    //                 var sq = document.getElementById(a);
+    //                 sq.removeChild(sq.firstElementChild);
+    //                 var graysq = document.getElementById(elem.id);
+    //                 graysq.classList.remove("dot");
+                
+            
+    //     }
+    //     }
+    var dots = document.querySelectorAll('.dot');
+
+dots.forEach(dot => {
+  dot.addEventListener('click', function handleClick(event) {
+    
+    var newimage = document.createElement("img");
+    newimage.src = 'blackpiece.png';
+    newimage.height = '100';
+    newimage.width = '100';
+    newimage.classList.add('img');
+    var id = dot.parentNode.id;
+    if(parseInt(a[1])>1){
+            var firstf = parseInt(a[0])-1;
+        var secondf = parseInt(a[1])-1;
+        var num = 10*firstf+secondf;
+        var text = num.toString();
+        var element = document.getElementById(text);
+        element.removeChild(element.firstChild);
+        // if(element.getElementsByTagName('img').length == 0){
+        //     element.classList.remove("dot");
+        // }
+    }
+    if(parseInt(a[1])<8){
+        var firstf = parseInt(a[0])-1;
+        var secondf = parseInt(a[1])+1;
+        var num = 10*firstf+secondf;
+        var text = num.toString();
+        var element = document.getElementById(text);
+        element.removeChild(element.firstChild);
+        // if(element.getElementsByTagName('img').length == 0){
+        //     element.classList.remove("dot");
+        // }
+    }
+    
+    document.getElementById(id).appendChild(newimage);
+    newimage.addEventListener('click', gray(newimage.parentNode.id));
+    var sq = document.getElementById(a);
+    while (sq.firstChild) {
+        sq.removeChild(sq.firstChild);
+    }
+    // sq.removeChild(sq.firstElementChild);
+
+    
+    
+    // box.setAttribute('style', 'background-color: yellow;');
+    // dots2 = document.getElementsByClassName("dot");
+    // for(i=0; i<dots2.length; i++){
+    //     // dots2[i].classList.remove("dot");
+    //     console.log(dots2[i].id);
+    // }
+  });
+  
+});
+
+
+}
+
+
+// function moveChecker(pos, par) {
+//     var newimage = document.createElement("img");
+//     newimage.src = 'blackpiece.png';
+//     newimage.height = '100';
+//     newimage.width = '100';
+//     newimage.classList.add('img');
+//     // newimage.addEventListener("click", gray(newimage.parentNode.id));
+//     document.getElementById(pos).appendChild(newimage);
+//     var sq = document.getElementById(par);
+//     sq.removeChild(sq.firstElementChild);
+//     var graysq = document.getElementById(pos);
+//     graysq.classList.remove("dot");
+
+
+// };
+
+
+
+    </script>
+</body>
+</html>
