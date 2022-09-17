@@ -143,12 +143,21 @@ function bgray(a){
     // console.log(img.firstChild.getAttribute("src")=="redpiece.png");
     // console.log(a);
     // console.log(document.getElementById("43").getElementsByClassName('img').length == 0);
-    if(second!=0 || secondr!=0){
-        var tempdots = document.getElementsByClassName("dot");
-    for(let i=0; i<tempdots.length; i++){
-        console.log(tempdots[i].parentNode.id);
-        tempdots[i].parentNode.removeChild(tempdots[i].parentNode.firstChild);
-    }
+    
+        var tempdots = document.querySelectorAll(".dot");
+        console.log(tempdots.length);
+        while(tempdots.length>0){
+            // console.log("es");
+            if(tempdots[0] && tempdots[0].parentNode.firstChild && tempdots[0].getElementsByClassName('img').length == 0){
+            tempdots[0].parentNode.removeChild(tempdots[0].parentNode.firstChild);
+            }
+        }
+    // for(let i=0; i<tempdots.length; i++){
+    //     // console.log(tempdots[i].parentNode.id);
+    //     console.log(i);
+    //     tempdots[i].parentNode.removeChild(tempdots[i].parentNode.firstChild);
+    //     console.log(i);
+    // }
     //     if(second>1){
     //         var firstf = first-1;
     //     var secondf = second-1;
@@ -203,7 +212,7 @@ function bgray(a){
 
     //     }
     // }
-    }
+    
 
     first = parseInt(a[0]);
     var firstf = first-1;
@@ -353,10 +362,10 @@ dots.forEach(dot => {
     //     //     element.classList.remove("dot");
     //     // }
     // }
-    var tempdots = document.getElementsByClassName("dot");
-    for(let i=0; i<tempdots.length; i++){
-        tempdots[i].parentNode.removeChild(tempdots[i].parentNode.firstChild);
-    }
+    // var tempdots = document.getElementsByClassName("dot");
+    // for(let i=0; i<tempdots.length; i++){
+    //     tempdots[i].parentNode.removeChild(tempdots[i].parentNode.firstChild);
+    // }
     document.getElementById(id).appendChild(newimage);
     // console.log(newimage.parentNode.id);
     
@@ -388,12 +397,17 @@ function rgray(a){
     // console.log(a);
     
     // console.log(document.getElementById("43").getElementsByClassName('img').length == 0);
-    if(secondr!=0 || second!=0){
+   
         var tempdots = document.getElementsByClassName("dot");
-    for(let i=0; i<tempdots.length; i++){
-        console.log(tempdots[i].parentNode.id);
-        tempdots[i].parentNode.removeChild(tempdots[i].parentNode.firstChild);
-    }
+        while(tempdots.length>0){
+            if(tempdots[0] && tempdots[0].getElementsByClassName('img').length == 0){
+                tempdots[0].parentNode.removeChild(tempdots[0].parentNode.firstChild);
+            }
+        }
+    // for(let i=0; i<tempdots.length; i++){
+        // console.log(tempdots[i].parentNode.id);
+        
+    // }
     //     if(secondr>1){
     //         var firstf = firstr+1;
     //     var secondf = secondr-1;
@@ -448,7 +462,7 @@ function rgray(a){
 
     //     }
     // }
-    }
+    
 
     firstr = parseInt(a[0]);
     var firstf = firstr+1;
@@ -600,10 +614,10 @@ dots.forEach(dot => {
     //     //     element.classList.remove("dot");
     //     // }
     // }
-    var tempdots = document.getElementsByClassName("dot");
-    for(let i=0; i<tempdots.length; i++){
-        tempdots[i].parentNode.removeChild(tempdots[i].parentNode.firstChild);
-    }
+    // var tempdots = document.getElementsByClassName("dot");
+    // for(let i=0; i<tempdots.length; i++){
+    //     tempdots[i].parentNode.removeChild(tempdots[i].parentNode.firstChild);
+    // }
     document.getElementById(id).appendChild(newimage);
     // console.log(newimage.parentNode.id);
     
